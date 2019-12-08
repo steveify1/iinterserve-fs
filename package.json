@@ -1,0 +1,29 @@
+{
+  "name": "interserve-fs",
+  "version": "1.0.0",
+  "description": "A server-side rendered website for InterserveConstruct",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steveify1/interserve-fs.git"
+  },
+  "keywords": [
+    "construction"
+  ],
+  "author": "Nwakasi Stephen Ifeanyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steveify1/interserve-fs/issues"
+  },
+  "homepage": "https://github.com/steveify1/interserve-fs#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
