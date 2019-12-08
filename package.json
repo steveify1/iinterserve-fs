@@ -4,7 +4,8 @@
   "description": "A server-side rendered website for InterserveConstruct",
   "main": "src/server.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text",
+    "test": "nyc --reporter=html --reporter=text mocha src/tests/",
+    "coverage": "nyc --reporter=text-lcov | coveralls",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
     "lint": "eslint src/**/*.js"
@@ -32,5 +33,12 @@
     "eslint-plugin-react": "^7.17.0",
     "express": "^4.17.1",
     "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
   }
 }
