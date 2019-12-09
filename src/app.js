@@ -26,7 +26,7 @@ const limitConfig = {
   // eslint-disable-next-line comma-dangle
   message: 'Too many request from this IP. Please, try again in an hour.'
 };
-app.use(rateLimit(limitConfig));
+app.use('/api', rateLimit(limitConfig));
 
 // XSS Prevention
 app.use(xss());
