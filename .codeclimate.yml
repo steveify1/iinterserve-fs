@@ -6,3 +6,4 @@ checks:
 exclude_patterns:
   - 'node_modules'
   - 'src/tests'
+  - 'src/public'
