@@ -45,7 +45,11 @@ app.use('/', routes);
 
 // 404 Page
 app.get('*', (req, res) => {
-  res.status(404).send('Page not found bro');
+  res.status(404).render('notFound', {
+    title: 'InterserveConstruct - 404',
+    // eslint-disable-next-line comma-dangle
+    url: `${req.protocol}://${req.hostname}${req.originalUrl}`
+  });
 });
 
 module.exports = app;
