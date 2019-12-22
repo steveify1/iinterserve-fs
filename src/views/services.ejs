@@ -1,4 +1,6 @@
 <%- include('./includes/header'); -%>
+<!-- Current Page -->
+<input type="text" id="page" value="services" hidden>
 
 <!-- Banner Section -->
 <div id="page-banner" class="flex flex-column">
@@ -8,9 +10,6 @@
 </header>
 <!-- End of Header Section -->
 
-
-<!-- Current Page -->
-<input type="text" id="page" value="services" hidden>
 
 <!-- Main Section -->
 <main>
@@ -31,26 +30,29 @@
 
 		<div id="services-list">
 			<!-- SERVICE LIST -->
-			<article id="porta-cabin" class="service-desc active">
+			<article id="porta-cabin" class="service-desc active" aria-label="Porta Cabin construction in Nigeria">
 				<h4 class="service-tilte title">porta cabins</h4>
 
 				<p class="description milli">
 					Porta cabins are types of demountable, transportable and building built to be movable rather
-					than permanently located, It can also be permanently built. It can serve different purposes
-					ranging from homes, office space, camp etc. At Interserve we build the best porta cabin with
+					than permanently located. They can also be permanently built. They can serve different purposes
+					ranging from homes, office space, camp etc. At Interserve we build the best porta cabins with
 					the best well insulated European cabin sheets paying attention to each details from
 					foundation to finish.
 				</p>
 
 				<section class="service-gallery">
-					<div class="gallery-item"><img src="./src/img/porta_cabins_01_interserve_construction.jpg" alt=""></div>
+					<div class="gallery-item">
+						<img data-src="./src/img/porta_cabins_01_interserve_construction.jpg"
+							alt="porta cabin construction in Nigeria - interserve construct">
+					</div>
 				</section>
 
 				<!-- <a href='/contact' class="btn">get in touch</a> -->
 			</article>
 
 
-			<article id="structural-design" class="service-desc flex flex-column">
+			<article id="structural-design" class="service-desc flex flex-column" aria-label="Structural Design in Nigeria">
 				<h4 class="service-tilte title">structural design</h4>
 
 				<p class="description milli">
@@ -63,14 +65,15 @@
 				</p>
 
 				<section class="service-gallery grid">
-					<div class="gallery-item"><img src="./src/img/architecture-828596_1920.jpg" alt=""></div>
+					<div class="gallery-item"><img data-src="./src/img/architecture-828596_1920.jpg"
+							alt="Structural Design in Nigeria - interserve construct"></div>
 				</section>
 
 				<!-- <a href='/contact' class="btn">get in touch</a> -->
 			</article>
 
 
-			<article id="architectural-design" class="service-desc">
+			<article id="architectural-design" class="service-desc" aria-label="Architectural Design in Nigeria">
 				<h4 class="service-tilte title">architectural design</h4>
 
 				<p class="description milli">
@@ -82,14 +85,16 @@
 				</p>
 
 				<section class="service-gallery grid">
-					<div class="gallery-item"><img src="./src/img/the-interior-of-the-1508273_1920.jpg" alt="">
+					<div class="gallery-item">
+						<img data-src="./src/img/the-interior-of-the-1508273_1920.jpg"
+							alt="Architectural Design in Nigeria - Interserve Construct">
 					</div>
 				</section>
 
 				<!-- <a href='/contact' class="btn">get in touch</a> -->
 			</article>
 
-			<article id="civil-engineering" class="service-desc">
+			<article id="civil-engineering" class="service-desc" aria-label="Architectural Design in Nigeria">
 				<h4 class="service-tilte title">general civil engineering</h4>
 
 				<p class="description milli">We offer general civil engineers services from planning, design,
@@ -104,13 +109,16 @@
 				</p>
 
 				<section class="service-gallery grid">
-					<div class="gallery-item"><img src="./src/img/housebuilding-1407462_1280.jpg" alt=""></div>
+					<div class="gallery-item">
+						<img data-src="./src/img/housebuilding-1407462_1280.jpg"
+							alt="Civil Engineering in Nigeria - Interserve Construct">
+					</div>
 				</section>
 
 				<!-- <a href='/contact' class="btn">get in touch</a> -->
 			</article>
 
-			<article id="sourcing-and-supply" class="service-desc">
+			<article id="sourcing-and-supply" class="service-desc" aria-label="Material Sourcing and Supply in Nigeria">
 				<h4 class="service-tilte title">material sourcing and suppy</h4>
 
 				<p class="description milli">
@@ -122,14 +130,17 @@
 				</p>
 
 				<section class="service-gallery grid">
-					<div class="gallery-item"><img src="./src/img/construction-3734380_1280.jpg" alt=""></div>
+					<div class="gallery-item">
+						<img data-src="./src/img/construction-3734380_1280.jpg"
+							alt="Material Sourcing and Supply in Nigeria - Interserve Construct">
+					</div>
 				</section>
 
 				<!-- <a href='/contact' class="btn">get in touch</a> -->
 			</article>
 
 
-			<article id="solar-power" class="service-desc">
+			<article id="solar-power" class="service-desc" aria-label="Solar Power Installation in Nigeria">
 				<h4 class="service-tilte title">solar power installation</h4>
 
 				<p class="description milli">
@@ -149,7 +160,10 @@
 				</p>
 
 				<section class="service-gallery grid">
-					<div class="gallery-item"><img src="./src/img/interserve-construction-solar-system.jpg" alt=""></div>
+					<div class="gallery-item">
+						<img data-src="./src/img/interserve-construction-solar-system.jpg"
+							alt="Solar Power Installation in Nigeria - Interserve Construct">
+					</div>
 				</section>
 
 				<!-- <a href='/contact' class="btn">get in touch</a> -->
@@ -169,11 +183,10 @@
 					Tell us what you need and get a free quotation in 4 hours max time.
 				</p>
 				<div class="cta">
-					<a href='/contact' class="btn">request a quote</a>
+					<a href class="show-quotation btn">request a quote</a>
 				</div>
 			</div>
 		</section>
 	</article>
-
 
 	<%- include('./includes/footer'); -%>
