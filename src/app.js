@@ -41,6 +41,7 @@ app.set('view engine', 'ejs');
 // SET PUBLIC DIRECTORY
 app.use(express.static(path.join(__dirname, 'public')));
 
+// PIPE TO ROUTERS
 app.use('/', routes);
 
 // 404 Page
