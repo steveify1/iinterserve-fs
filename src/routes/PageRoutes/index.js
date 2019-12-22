@@ -1,7 +1,7 @@
 const { Router } = require('express');
 
 const router = Router();
-const brand = 'InterserveConstruct';
+const brand = 'Interserve Construct';
 
 router.get('/', (req, res) => {
   res.render('index.ejs', {
