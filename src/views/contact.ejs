@@ -1,6 +1,14 @@
 <%- include('./includes/header'); -%>
 <input type="text" id="page" value="contact" hidden>
 
+
+<div id="modal" class="modal flex flex-column">
+	<div class="modal__content">
+		<a href="/" class="modal__close">X</a>
+		<div class="modal__inner flex flex-column"></div>
+	</div>
+</div>
+
 <!-- Banner Section -->
 <div id="page-banner" class="flex flex-column">
 	<h1 class="title">Almost There!</h1>
@@ -17,7 +25,7 @@
 		<section class="section-body grid">
 			<article class="contact-form">
 				<h1 class="section-title">Start Building!</h1>
-				<form class="form" action="">
+				<form id='contact-form' class="form">
 					<p class="desc">Fields marked <span>*</span> are required.</p>
 					<br>
 					<div class="form-group">
@@ -30,7 +38,7 @@
 					</div>
 					<div class="form-group">
 						<label for="phone">Phone</label>
-						<input id="phone" type="number" name="phone">
+						<input id="phone" type="number" name="phone" min="0">
 					</div>
 					<div class="form-group">
 						<label for="service">Pick a service<span>*</span></label>
@@ -47,15 +55,11 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="start">Preferred Start Date<span>*</span></label>
-						<input id="start" type="date" name="start">
-					</div>
-					<div class="form-group">
-						<label for="project-description">Describe your project<span>*</span></label>
-						<textarea id="project-description" row="300" name="project-description"></textarea>
+						<label for="description">Describe your project<span>*</span></label>
+						<textarea id="description" row="300" name="description"></textarea>
 					</div>
 
-					<input type="submit" class="btn btn-full-width">
+					<button type="submit" class="btn btn-shadow btn-full-width disabled">Submit</button>
 				</form>
 			</article>
 

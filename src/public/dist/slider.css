@@ -22,7 +22,6 @@ h3 {
 	text-align: center;
 }
 */
-
 /*
 
 #banner {
@@ -41,7 +40,7 @@ h3 {
 
 .slide {
 	height: 80%;
-	/*	width: 50%;*/
+/*	width: 50%;*/
 	width: 80%;
 	margin: auto;
 	color: #fff;
@@ -51,7 +50,7 @@ h3 {
 	top: 50%;
 	left: 0;
 	right: 0;
-	/*	transform: translateY(-50%) scale(0.4);*/
+/*	transform: translateY(-50%) scale(0.4);*/
 	transform: translateY(-50%);
 	overflow: hidden;
 	box-sizing: border-box;
@@ -61,16 +60,13 @@ h3 {
 	display: -o-flex;
 	display: flex;
 	-o-transition: all 0.3s ease;
-	-ms-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.slide>img
-/*you can change this "img" element to whatever you want to use as the main slide */
-
-	{
+.slide > img /*you can change this "img" element to whatever you want to use as the main slide */ {
 	width: 100%;
 	object-fit: contain;
 	object-fit: fill;
@@ -95,10 +91,12 @@ h3 {
 	overflow: hidden;
 }
 
-.slide.prev, .slide.next {
+.slide.prev,
+.slide.next {
 	/* opacity: 1; */
 	z-index: 0;
 }
+
 
 .slide.current {
 	width: 80%;
@@ -108,13 +106,14 @@ h3 {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.slide.current>img {
+.slide.current > img {
 	transition: transform 2s ease;
 }
 
 .slide.current:hover img.slide-transform {
 	transform: scale(1.1) rotate(1deg) translate(3%, -2%);
 }
+
 
 .slide.current .slide-inner-text::before {
 	content: " ";
@@ -150,8 +149,10 @@ h3 {
 	0% {
 		transform: translate(-150%, -50%);
 	}
+	
 	100% {
-		transform: translate(150%, -50%);
+		
+	transform: translate(150%, -50%);
 	}
 }
 
@@ -159,20 +160,23 @@ h3 {
 	0% {
 		transform: translate(-50%, 150%);
 	}
+	
 	100% {
-		transform: translate(-50%, -150%);
+		
+	transform: translate(-50%, -150%);
 	}
 }
 
 .slide.prev {
-	/*	transform: translateY(calc(25% - 0.5em)) translateX(calc(0% + 1em));*/
+/*	transform: translateY(calc(25% - 0.5em)) translateX(calc(0% + 1em));*/
 	/* transform: translate(-70%, -50%); */
 }
 
 .slide.next {
-	/*	transform: translateY(calc(25% - 0.5em)) translateX(calc(100% - 2em));*/
+/*	transform: translateY(calc(25% - 0.5em)) translateX(calc(100% - 2em));*/
 	/* transform: translate(70%, -50%); */
 }
+
 
 .slide-indicator {
 	display: -webkit-flex;
@@ -197,10 +201,11 @@ h3 {
 
 .slide-indicator .indicator.active {
 	background: #1fea36;
-	/*	background: rgba(12, 114, 177, 0.92);*/
+/*	background: rgba(12, 114, 177, 0.92);*/
 }
 
-.slide-indicator .indicator, .slide-controls .slide-control {
+.slide-indicator .indicator,
+.slide-controls .slide-control {
 	cursor: pointer;
 }
 
@@ -230,7 +235,7 @@ h3 {
 
 .slide-controls .slide-control {
 	color: #e7e7e7;
-	/*	position: fixed;*/
+/*	position: fixed;*/
 	height: 40px;
 	width: 40px;
 	border-radius: 50%;
@@ -268,6 +273,7 @@ h3 {
 	0% {
 		transform: scale(0.9) rotate(0);
 	}
+
 	100% {
 		transform: scale(1.2) rotate(calc(-360deg * 3));
 	}
@@ -277,6 +283,7 @@ h3 {
 	0% {
 		transform: scale(1.2) rotate(calc(-360deg * 3));
 	}
+
 	100% {
 		transform: scale(1) rotate(0);
 	}
