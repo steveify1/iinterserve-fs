@@ -803,7 +803,7 @@ h3 {
   -ms-align-items: center;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .slide-controls .slide-control i {
@@ -812,11 +812,11 @@ h3 {
 
 .slide-controls .slide-control.rotate:hover {
   transform: scale(1.2);
-  animation: sweet 1.3s ease;
+  animation: sweet 0.3s ease;
 }
 
 .slide-controls .slide-control.reverseRotate {
-  animation: reverseSweet 1.3s ease;
+  animation: reverseSweet 0.3s ease;
 }
 
 @keyframes sweet {
@@ -824,23 +824,23 @@ h3 {
     transform: scale(0.9) rotate(0);
   }
   100% {
-    transform: scale(1.2) rotate(calc(-360deg * 3));
+    transform: scale(1.2) rotate(-360deg);
   }
 }
 @keyframes reverseSweet {
   0% {
-    transform: scale(1.2) rotate(calc(-360deg * 3));
+    transform: scale(1.2) rotate(-360deg);
   }
   100% {
     transform: scale(1) rotate(0);
   }
 }
 .slide-controls .slide-control.left-control {
-  left: 2%;
+  left: 1%;
 }
 
 .slide-controls .slide-control.right-control {
-  right: 2%;
+  right: 1%;
 }
 
 * {
@@ -1718,7 +1718,7 @@ nav#main-nav.nav-fixed #logo p {
 *
 **************************/
 main {
-  min-height: 100vh;
+  min-height: 50vh;
   width: 100%;
   max-width: 100vw;
   height: fit-content;
@@ -2375,7 +2375,7 @@ form.on-page-contact-form p {
 }
 
 .page-content {
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 
 /**************************
@@ -2780,6 +2780,20 @@ main #contact-page-container .section-body .address-and-map {
 main #contact-page-container .section-body .contact-form form {
   margin: auto;
 }
+main #contact-page-container .section-body .contact-form form input.error,
+main #contact-page-container .section-body .contact-form form textarea.error,
+main #contact-page-container .section-body .contact-form form select.error {
+  border-color: red;
+}
+main #contact-page-container .section-body .contact-form form textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 300px;
+}
+main #contact-page-container .section-body .contact-form form button.disabled {
+  opacity: 0.7;
+}
 main #contact-page-container .section-body .address-and-map {
   grid-row-gap: 1em;
 }
@@ -2816,6 +2830,15 @@ main #contact-page-container .section-body .address-and-map .contact-map .google
     grid-template-columns: 2fr 1.5fr;
     grid-column-gap: 3%;
   }
+}
+
+#contact-success {
+  background: #3838a3;
+  height: 50vh;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 /**************************
@@ -2907,6 +2930,55 @@ footer ul.social li:not(:first-child):not(:last-child) {
     height: 50px;
     width: 50px;
   }
+}
+
+.modal {
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal::before {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100vw;
+  height: 120vh;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal--show {
+  display: block;
+}
+.modal__content {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -40%);
+  width: 95%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 0.5em;
+}
+.modal__inner {
+  height: 100%;
+  min-height: 250px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.modal__inner h1 {
+  color: #3838a3;
+  font-size: 1.45rem;
+}
+.modal__close {
+  background-color: transparent;
+  position: absolute;
+  right: 1em;
+  padding: 0.5em;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
